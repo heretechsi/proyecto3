@@ -1,0 +1,335 @@
+/* Estilos generales */
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    display: flex; 
+    background-image:url('./images/backgroundHome.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.prepararcopia {
+    background-image:url('./images/backgroundCopias.jpg');
+    
+}
+.input_ing {
+            width: 40%;
+            padding: 5px 15px;
+            height: 25px;
+            font-size: 16px;
+        }
+
+/* Estilos para el aside (barra lateral) */
+#sidebar {
+    background-color: #2a454eff;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1; /* Establecemos z-index en 1 */
+}
+
+#sidebar2 {
+    background-color: #2a454eff;
+    color: white;
+    padding: 20px;
+    width: 500px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1; /* Establecemos z-index en 1 */
+
+}
+
+/* Estilos para el encabezado del aside */
+#sidebar h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: rgb(148, 234, 239);
+}
+
+#sidebar h3 {
+    margin-bottom: 20px;
+    color: rgb(148, 234, 239);
+}
+
+#sidebar2 h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(148, 234, 239);
+}
+
+#sidebar2 h3 {
+    margin-bottom: 20px;
+    color: rgb(148, 234, 239);
+}
+
+
+
+/* Estilos para los campos de entrada (Año y Foja) y botones */
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.caja1[type="text"] {
+    width: 35%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    /* display: block; */
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #868488;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #062931;
+}
+
+/* Estilos para el contenedor de la imagen */
+#imageGallery {
+    flex: 1; /* El contenido principal ocupará el espacio restante */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+}
+
+#imageGallery img {
+    display: block;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    overflow: auto; 
+    transform-origin: top left; /* Asegura que el punto de origen de la transformación sea la esquina superior izquierda */
+}
+
+#fojaInicialDisplay,
+#fojaFinalDisplay {
+    display: block;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    overflow: auto; 
+    transform-origin: top left; /* Asegura que el punto de origen de la transformación sea la esquina superior izquierda */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #160031;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 270px;
+    width: calc(100% - 270px);
+}
+
+/* Estilos para el párrafo de la foja actual */
+#fojaActual {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.upload-link {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #868488;
+    color: white;
+    cursor: pointer;
+}
+
+.upload-link:hover {
+    background-color: #062931;
+}
+
+.button2 {
+    /* display: block; */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #868488;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2:hover {
+    background-color: #062931;
+}
+
+.div1 {
+    display:flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.div2 {
+    display:flex;
+    gap: 10px;
+}
+
+.div3 {
+    display:flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.div4 {
+    display:block;
+    gap: 10px;
+    width: 200%;
+}
+
+.with-icon {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 15px; /* Ajusta este valor según el ancho de tu icono */
+    height: 3em; /* Establece la altura del botón en relación con el tamaño de fuente */
+    font-size: 16px; /* Tamaño   de fuente del texto */
+    line-height: 1; /* Evita espacios innecesarios dentro del botón */
+    background-origin: content-box; /* Indica que el fondo comienza en el borde del contenido del elemento */
+}
+
+#uploadButton {
+    background-image: url('./images/upload.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#showImagesButton {
+    background-image: url('./images/view.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#logoutButton {
+    background-image: url('./images/logout.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#showImagesButton {
+    background-image: url('./images/view.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#limpiarDatosButton {
+    background-image: url('./images/clean.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#cropImageButton {
+    background-image: url('./images/cut0.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#cropImageButton2 {
+    background-image: url('./images/cut1.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#generarPdfCopiasButton {
+    background-image: url('./images/copias.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#generatePdfFinalButton {
+    background-image: url('./images/docFinal.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#cerrarButton {
+    background-image: url('./images/cerrar.png');
+    background-size: 26px; /* Tamaño del icono */
+}
+
+#titulo {
+    font-size: 24px; 
+}
+
+#titulo span {
+    line-height: 1.2; 
+}
+
+#titulo2 {
+    color: #ffffff;
+    text-align: center; 
+}
+
+
+.header {
+    display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+#titulo {
+    font-size: 24px; /* Tamaño de fuente del título */
+}
+
+#titulo span {
+    line-height: 1.2; /* Espacio entre líneas */
+}
+
+.logo-container img {
+    width:120px; /* Define el ancho deseado para la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+}
+
+.logo-container2 img {
+    width:70px; /* Define el ancho deseado para la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+}
+
+#cantidadArchivosCargados {
+    font-size: 20px;
+    text-align: center;
+    color:yellow;
+}
