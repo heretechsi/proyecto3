@@ -1,1 +1,167 @@
-function _0x2860(){const _0x3b223a=['ZJRJv','4639545tSZUhH','arte','getPageInd','lido.','FinalUnaFo','525OgAtbA','ault','getHeight','99282zAHPjn','drawImage','VigentePar','dJAMa','10755815DIJKsb','OJxud','TBvxB','vajpb','nnzZn','createObje','enteAguasP','XVTNq','contenidoD','length','3ydOgRl','ente','clear','enteAguas','6407816geUqTe','_blank','IuLlm','open','lugar','VbsxX','split','ano','fvTTZ','OxgAI','copyPages','getWidth','laVYS','ById','XsNaI','Simple','Seleccione','ocEspecial','awGdi','embedPng','applicatio','192630oNxVxO','NCxap','jpYUy','LxrIY','a\x20copia.','buffer','bHJLz','height','comuna','e\x20copia\x20vá','mmxFM','QQpML','jFaoM','width','ices','YoqQr','TJMvf','JNtnH','gnAjo','generarPdf','BYbIV','generado\x20l','special','1282KUdgtn','RSWAp','create','lRecortada','2189xkQFJc','nmoBd','enteParte','addPage','HpzPo','click','numero','n/pdf','VFjhS','ton','value','copia','LSqKT','save','getItem','ATXEV','SbHnA','YhSDE','vzllE','BcdIK','sYxGE','bkriC','No\x20se\x20han\x20','nombre','stener','Vigente','load','zhAzy','tituloDocE','FUZgN','registro','jaButton','oGQfz','ctURL','QrPch','preventDef','2468gdXYsp','54672XMOKCO','forEach','PDFDocumen','addEventLi','GRWIo','\x20un\x20tipo\x20d','DominioVig','canal','EWTQl','PVShp','Eouzd','getElement','tybtX','cYVPV','fojaInicia','dSXms','zOcGK','sUJUk','UnaFojaBut','LwAoy','charCodeAt','EbAtF','DocumentoE'];_0x2860=function(){return _0x3b223a;};return _0x2860();}const _0x44b96e=_0x1f91;(function(_0x220bc5,_0x206697){const _0x558376=_0x1f91,_0x158bd7=_0x220bc5();while(!![]){try{const _0x2ab46b=parseInt(_0x558376(0x1e0))/(-0xbea+0x23f3+-0x1808)*(-parseInt(_0x558376(0x208))/(-0x121c+-0xbcd+0x1deb))+-parseInt(_0x558376(0x1b0))/(-0xfb2*-0x2+-0xbd3+-0x138e)*(parseInt(_0x558376(0x1b4))/(0x41f*-0x6+-0x29*-0x9b+-0x15))+-parseInt(_0x558376(0x19f))/(-0xb87*0x3+-0x1945+0x3bdf)*(parseInt(_0x558376(0x1a2))/(0x1*0x134b+0x26ea+-0x1*0x3a2f))+parseInt(_0x558376(0x1a6))/(0x3*0x839+0x1b96+-0x23*0x17e)+parseInt(_0x558376(0x182))/(0x22ed+0x1b07+-0x3dec)+parseInt(_0x558376(0x19a))/(-0x1649+0x13c6*0x1+0x28c)+-parseInt(_0x558376(0x1c9))/(0x16f*-0x9+0xdcd+-0x2c*0x5)*(-parseInt(_0x558376(0x1e4))/(0x2310+-0x3*0x935+-0x766));if(_0x2ab46b===_0x206697)break;else _0x158bd7['push'](_0x158bd7['shift']());}catch(_0x22632d){_0x158bd7['push'](_0x158bd7['shift']());}}}(_0x2860,0x197f*-0x1+0x32ef3*-0x3+0xc3b5a*0x2));function _0x1f91(_0x1901a5,_0xcbf860){const _0x225d96=_0x2860();return _0x1f91=function(_0x42e4b9,_0x6c6e66){_0x42e4b9=_0x42e4b9-(0xb51+-0x1f44+0x1575);let _0x41cf86=_0x225d96[_0x42e4b9];return _0x41cf86;},_0x1f91(_0x1901a5,_0xcbf860);}async function generarPDFUnaFoja(){const _0x4f6e5b=_0x1f91,_0x4e4578={'mmxFM':_0x4f6e5b(0x190)+_0x4f6e5b(0x1e3),'JNtnH':function(_0x1a180c){return _0x1a180c();},'oGQfz':function(_0x8030d,_0x43bff0){return _0x8030d(_0x43bff0);},'zOcGK':_0x4f6e5b(0x1fa)+_0x4f6e5b(0x1de)+_0x4f6e5b(0x1cd),'XVTNq':function(_0x472c99,_0x31cb08,_0x3ba054,_0x969137){return _0x472c99(_0x31cb08,_0x3ba054,_0x969137);},'bHJLz':_0x4f6e5b(0x1c8)+_0x4f6e5b(0x1eb),'dSXms':_0x4f6e5b(0x1b5)};let _0x7d1f2d=localStorage[_0x4f6e5b(0x1f2)](_0x4e4578[_0x4f6e5b(0x1d3)]);const _0x29a4fb=await _0x4e4578[_0x4f6e5b(0x1da)](generateCopiasPDF);if(!_0x29a4fb){_0x4e4578[_0x4f6e5b(0x204)](alert,_0x4e4578[_0x4f6e5b(0x192)]);return;}const _0x2b82c4=await PDFLib[_0x4f6e5b(0x184)+'t'][_0x4f6e5b(0x1e2)](),_0x3e61d2=await PDFLib[_0x4f6e5b(0x184)+'t'][_0x4f6e5b(0x1fe)](_0x29a4fb),_0x1235c5=await _0x2b82c4[_0x4f6e5b(0x1be)](_0x3e61d2,_0x3e61d2[_0x4f6e5b(0x19c)+_0x4f6e5b(0x1d7)]());_0x7d1f2d?await _0x4e4578[_0x4f6e5b(0x1ad)](generatePdfWithAdjustedWidth,_0x7d1f2d,_0x2b82c4,![]):_0x2b82c4[_0x4f6e5b(0x1e7)](_0x1235c5[-0x52*-0x9+0x1*-0x1cfb+0x3*0x8b3]);const _0x2405ac=await _0x2b82c4[_0x4f6e5b(0x1f1)]();window[_0x4f6e5b(0x1b7)](URL[_0x4f6e5b(0x1ab)+_0x4f6e5b(0x205)](new Blob([_0x2405ac],{'type':_0x4e4578[_0x4f6e5b(0x1cf)]})),_0x4e4578[_0x4f6e5b(0x191)]);}const generarPdfUnaFojaButton=document[_0x44b96e(0x18d)+_0x44b96e(0x1c1)](_0x44b96e(0x1dc)+_0x44b96e(0x194)+_0x44b96e(0x1ed));generarPdfUnaFojaButton[_0x44b96e(0x185)+_0x44b96e(0x1fc)](_0x44b96e(0x1e9),_0x2eb396=>{const _0x16f392=_0x44b96e,_0xc930a4={'awGdi':function(_0x4b618d){return _0x4b618d();}};_0x2eb396[_0x16f392(0x207)+_0x16f392(0x1a0)](),_0xc930a4[_0x16f392(0x1c6)](generarPDFUnaFoja),localStorage[_0x16f392(0x1b2)]();});async function generarDocumentoFinal1(){const _0x26a9b5=_0x44b96e,_0x3ddd73={'sUJUk':_0x26a9b5(0x190)+_0x26a9b5(0x1e3),'EbAtF':function(_0x264edb){return _0x264edb();},'gnAjo':function(_0xf19930,_0x41b8e0){return _0xf19930(_0x41b8e0);},'SbHnA':_0x26a9b5(0x1fa)+_0x26a9b5(0x1de)+_0x26a9b5(0x1cd),'XsNaI':_0x26a9b5(0x202),'jFaoM':_0x26a9b5(0x1fb),'bkriC':_0x26a9b5(0x190)+'l','VFjhS':_0x26a9b5(0x1ea),'YoqQr':_0x26a9b5(0x1bb),'fvTTZ':_0x26a9b5(0x1ef),'TJMvf':_0x26a9b5(0x1b8),'HpzPo':_0x26a9b5(0x1d1),'QQpML':_0x26a9b5(0x189),'LxrIY':_0x26a9b5(0x200)+_0x26a9b5(0x1df),'YhSDE':_0x26a9b5(0x1ae)+_0x26a9b5(0x1c5),'laVYS':_0x26a9b5(0x1c3),'FUZgN':function(_0x56bcc7,_0x287bdc,_0x15dc1c,_0x200a72,_0x377653,_0x2178ad){return _0x56bcc7(_0x287bdc,_0x15dc1c,_0x200a72,_0x377653,_0x2178ad);},'VbsxX':_0x26a9b5(0x1fd),'RSWAp':function(_0x20958b,_0x375b0f,_0x1da47f,_0x1f39c8,_0x46f843,_0x3911da){return _0x20958b(_0x375b0f,_0x1da47f,_0x1f39c8,_0x46f843,_0x3911da);},'TBvxB':_0x26a9b5(0x1a4)+'te','dJAMa':_0x26a9b5(0x188)+_0x26a9b5(0x1b1),'LwAoy':function(_0x212357,_0x190157,_0x49b3fa,_0x211561,_0x451340,_0x3a075a,_0xad26b4,_0x20566c){return _0x212357(_0x190157,_0x49b3fa,_0x211561,_0x451340,_0x3a075a,_0xad26b4,_0x20566c);},'sYxGE':_0x26a9b5(0x188)+_0x26a9b5(0x1e6),'OxgAI':_0x26a9b5(0x188)+_0x26a9b5(0x1b3),'ZJRJv':function(_0x8ecad8,_0x3dbf1e,_0x2bb0b3,_0x155772,_0x264489,_0x145d39,_0x4105ff){return _0x8ecad8(_0x3dbf1e,_0x2bb0b3,_0x155772,_0x264489,_0x145d39,_0x4105ff);},'LSqKT':_0x26a9b5(0x188)+_0x26a9b5(0x1ac)+_0x26a9b5(0x19b),'ATXEV':function(_0x1c2d0,_0x5bfada,_0x17ad5d,_0x2824a5,_0x225c0c,_0x19eb1c,_0x3eeaf0){return _0x1c2d0(_0x5bfada,_0x17ad5d,_0x2824a5,_0x225c0c,_0x19eb1c,_0x3eeaf0);},'QrPch':_0x26a9b5(0x198)+_0x26a9b5(0x1df),'tybtX':function(_0x209fa8,_0x4da468,_0x6d2b6d,_0x26900f,_0xbbc509,_0x44adab,_0x194253,_0x37f1c1){return _0x209fa8(_0x4da468,_0x6d2b6d,_0x26900f,_0xbbc509,_0x44adab,_0x194253,_0x37f1c1);},'OJxud':function(_0x424269,_0x174ea7){return _0x424269(_0x174ea7);},'zhAzy':_0x26a9b5(0x1c4)+_0x26a9b5(0x187)+_0x26a9b5(0x1d2)+_0x26a9b5(0x19d),'Eouzd':function(_0x24cba2,_0x2de9a8,_0x4453c3,_0x537a85){return _0x24cba2(_0x2de9a8,_0x4453c3,_0x537a85);},'EWTQl':_0x26a9b5(0x1c8)+_0x26a9b5(0x1eb),'IuLlm':_0x26a9b5(0x1b5)};let _0x1fbbfa=localStorage[_0x26a9b5(0x1f2)](_0x3ddd73[_0x26a9b5(0x193)]);const _0x3c7a03=await _0x3ddd73[_0x26a9b5(0x197)](generateCopiasPDF);if(!_0x3c7a03){_0x3ddd73[_0x26a9b5(0x1db)](alert,_0x3ddd73[_0x26a9b5(0x1f4)]);return;}const _0xf347e7=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1c2)])[_0x26a9b5(0x1ee)],_0x452916=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1d5)])[_0x26a9b5(0x1ee)],_0x4d5b7a=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1f9)])[_0x26a9b5(0x1ee)],_0x167c1f=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1ec)])[_0x26a9b5(0x1ee)],_0x4bd5d1=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1d8)])[_0x26a9b5(0x1ee)],_0x20d937=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1bc)])[_0x26a9b5(0x1ee)],_0x3e6a45=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1d9)])[_0x26a9b5(0x1ee)],_0x505579=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1e8)])[_0x26a9b5(0x1ee)],_0x5e14f4=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1d4)])[_0x26a9b5(0x1ee)],_0x3a5d33=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1cc)])[_0x26a9b5(0x1ee)],_0xed809a=document[_0x26a9b5(0x18d)+_0x26a9b5(0x1c1)](_0x3ddd73[_0x26a9b5(0x1f5)])[_0x26a9b5(0x1ee)];let _0x14f1fd;switch(_0x20d937){case _0x3ddd73[_0x26a9b5(0x1c0)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x201)](generateCertificadoSimple,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1);break;case _0x3ddd73[_0x26a9b5(0x1b9)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x1e1)](generateCertificadoVigente,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1);break;case _0x3ddd73[_0x26a9b5(0x1a8)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x1e1)](generateCertificadoVigenteParte,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1);break;case _0x3ddd73[_0x26a9b5(0x1a5)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x195)](generateCertificadoDominioVigente,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1,_0x3e6a45,_0x505579);break;case _0x3ddd73[_0x26a9b5(0x1f8)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x195)](generateCertificadoDominioVigenteParte,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1,_0x3e6a45,_0x505579);break;case _0x3ddd73[_0x26a9b5(0x1bd)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x199)](generateCertificadoDominioVigenteAguas,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1,_0x5e14f4);break;case _0x3ddd73[_0x26a9b5(0x1f0)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x1f3)](generateCertificadoDominioVigenteAguasParte,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1,_0x5e14f4);break;case _0x3ddd73[_0x26a9b5(0x206)]:_0x14f1fd=await _0x3ddd73[_0x26a9b5(0x18e)](generateCertificadoDocEspecial,_0xf347e7,_0x452916,_0x4d5b7a,_0x167c1f,_0x4bd5d1,_0x3a5d33,_0xed809a);break;default:_0x3ddd73[_0x26a9b5(0x1a7)](alert,_0x3ddd73[_0x26a9b5(0x1ff)]);return;}const _0x1e74e4=await PDFLib[_0x26a9b5(0x184)+'t'][_0x26a9b5(0x1e2)](),_0x505c73=await PDFLib[_0x26a9b5(0x184)+'t'][_0x26a9b5(0x1fe)](_0x14f1fd),_0x1d53f4=await _0x1e74e4[_0x26a9b5(0x1be)](_0x505c73,_0x505c73[_0x26a9b5(0x19c)+_0x26a9b5(0x1d7)]());_0x1d53f4[_0x26a9b5(0x183)](_0x7b842c=>_0x1e74e4[_0x26a9b5(0x1e7)](_0x7b842c));if(_0x1fbbfa)await _0x3ddd73[_0x26a9b5(0x18c)](generatePdfWithAdjustedWidth,_0x1fbbfa,_0x1e74e4,![]);else{const _0x1c58f7=await PDFLib[_0x26a9b5(0x184)+'t'][_0x26a9b5(0x1fe)](_0x3c7a03),_0x54b160=await _0x1e74e4[_0x26a9b5(0x1be)](_0x1c58f7,[0x24d8+-0x2132*0x1+0x3a6*-0x1]);_0x1e74e4[_0x26a9b5(0x1e7)](_0x54b160[-0x821*0x2+-0x26d+-0x1*-0x12af]);}const _0xefe3e8=await _0x1e74e4[_0x26a9b5(0x1f1)]();window[_0x26a9b5(0x1b7)](URL[_0x26a9b5(0x1ab)+_0x26a9b5(0x205)](new Blob([_0xefe3e8],{'type':_0x3ddd73[_0x26a9b5(0x18a)]})),_0x3ddd73[_0x26a9b5(0x1b6)]);}async function generatePdfWithAdjustedWidth(_0x59400c,_0x1476da,_0x2f5885=![]){const _0x37f202=_0x44b96e,_0x304b68={'nnzZn':function(_0x5439eb,_0x5e7041){return _0x5439eb(_0x5e7041);},'PVShp':function(_0x193ed8,_0x4f3250){return _0x193ed8<_0x4f3250;},'GRWIo':function(_0x5531a3,_0x276463){return _0x5531a3/_0x276463;},'cYVPV':function(_0x56343e,_0x2d0d7d){return _0x56343e*_0x2d0d7d;},'vzllE':function(_0x1492b0,_0x89d53){return _0x1492b0>_0x89d53;},'BcdIK':function(_0x393c32,_0x1d1011){return _0x393c32+_0x1d1011;},'NCxap':function(_0x406f66,_0x352f13){return _0x406f66-_0x352f13;},'BYbIV':function(_0x14bdde,_0x14c8f4){return _0x14bdde*_0x14c8f4;},'jpYUy':function(_0x3083fe,_0x241cb5){return _0x3083fe-_0x241cb5;},'vajpb':function(_0x54371c,_0x7f3398){return _0x54371c-_0x7f3398;}},_0x301325=_0x304b68[_0x37f202(0x1aa)](atob,_0x59400c[_0x37f202(0x1ba)](',')[-0x2*0x1271+0x179f+0xd44]),_0x53d7e7=new Uint8Array(_0x301325[_0x37f202(0x1af)]);for(let _0x5b2246=-0x1*0x1c27+0x359*-0x5+0x2ce4;_0x304b68[_0x37f202(0x18b)](_0x5b2246,_0x301325[_0x37f202(0x1af)]);_0x5b2246++){_0x53d7e7[_0x5b2246]=_0x301325[_0x37f202(0x196)](_0x5b2246);}const _0x249792=await _0x1476da[_0x37f202(0x1c7)](_0x53d7e7[_0x37f202(0x1ce)]),_0xc8469e=_0x1476da[_0x37f202(0x1e7)]([-0x2*0x39a+0x3*-0xb57+0x2b9d,-0x1*0x1b63+-0x51*-0x1e+0x158d]),_0x22aa76=_0x249792[_0x37f202(0x1d6)],_0x250fb1=_0x249792[_0x37f202(0x1d0)],_0x361e85=_0xc8469e[_0x37f202(0x1bf)](),_0xf18e3b=_0xc8469e[_0x37f202(0x1a1)](),_0x5e83af=_0x304b68[_0x37f202(0x186)](_0x361e85,_0x22aa76),_0x20feb0=_0x304b68[_0x37f202(0x18f)](_0x250fb1,_0x5e83af),_0x5bf619=0x1070*0x1+0x32*-0x5e+0x21e;if(_0x304b68[_0x37f202(0x1f6)](_0x304b68[_0x37f202(0x1f7)](_0x20feb0,_0x5bf619),_0xf18e3b)){const _0x29d4d3=_0x304b68[_0x37f202(0x186)](_0x304b68[_0x37f202(0x1ca)](_0xf18e3b,_0x5bf619),_0x250fb1),_0x512ff5=_0x304b68[_0x37f202(0x1dd)](_0x22aa76,_0x29d4d3);_0xc8469e[_0x37f202(0x1a3)](_0x249792,{'x':_0x304b68[_0x37f202(0x186)](_0x304b68[_0x37f202(0x1ca)](_0x361e85,_0x512ff5),-0x1b45+-0x16f7+0x76*0x6d),'y':_0x2f5885?_0x5bf619:0xc53+0x1e8d+-0x8*0x55c,'width':_0x512ff5,'height':_0x304b68[_0x37f202(0x1ca)](_0xf18e3b,_0x5bf619)});}else{const _0x1c3459=_0x2f5885?_0x5bf619:_0x304b68[_0x37f202(0x1cb)](_0x304b68[_0x37f202(0x1a9)](_0xf18e3b,_0x20feb0),_0x5bf619);_0xc8469e[_0x37f202(0x1a3)](_0x249792,{'x':0x0,'y':_0x1c3459,'width':_0x361e85,'height':_0x20feb0});}}const generarPdfFinalUnaFojaButton=document[_0x44b96e(0x18d)+_0x44b96e(0x1c1)](_0x44b96e(0x1dc)+_0x44b96e(0x19e)+_0x44b96e(0x203));generarPdfFinalUnaFojaButton[_0x44b96e(0x185)+_0x44b96e(0x1fc)](_0x44b96e(0x1e9),_0x5adb9a=>{const _0x307ac7=_0x44b96e,_0x2df671={'nmoBd':function(_0x1126a3){return _0x1126a3();}};_0x5adb9a[_0x307ac7(0x207)+_0x307ac7(0x1a0)](),_0x2df671[_0x307ac7(0x1e5)](generarDocumentoFinal1),localStorage[_0x307ac7(0x1b2)]();});
+// Genera copia sin certificado
+async function generarPDFUnaFoja() {
+    // Recuperar las imágen recortada desde localStorage al cargar la página
+    let fojaInicialRecortada = localStorage.getItem('fojaInicialRecortada');
+
+    // Genera el PDF de la copia
+    const copiasPdfBytes = await generateCopiasPDF();
+    
+    if (!copiasPdfBytes) {
+        alert("No se han generado la copia.");
+        return;
+    }
+
+    const pdfDoc = await PDFLib.PDFDocument.create();
+    
+    // Añade las página de la copia
+    const copiasPdf = await PDFLib.PDFDocument.load(copiasPdfBytes);
+    const copiasPages = await pdfDoc.copyPages(copiasPdf, copiasPdf.getPageIndices());
+
+    // Reemplaza la primera página si la imagen recortada está disponible
+    if (fojaInicialRecortada) {
+        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, false); 
+    } else {
+        pdfDoc.addPage(copiasPages[0]);
+    }
+
+    // Muestra el documento final en una nueva ventana
+    const pdfBytes = await pdfDoc.save();
+    window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
+}
+
+// Asigna el evento del botón "Generar copia"
+const generarPdfUnaFojaButton = document.getElementById("generarPdfUnaFojaButton");
+generarPdfUnaFojaButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    generarPDFUnaFoja();
+    localStorage.clear();
+});
+
+// Genera documento final (certificado y copia)
+async function generarDocumentoFinal1() {
+    // Recuperar la imagen recortada desde localStorage al cargar la página
+    let fojaInicialRecortada = localStorage.getItem('fojaInicialRecortada');
+
+    // Genera el PDF de la copia
+    const copiasPdfBytes = await generateCopiasPDF();
+
+    if (!copiasPdfBytes) {
+        alert("No se han generado la copia.");
+        return;
+    }
+
+    // Genera el certificado con los datos del formulario
+    const registro = document.getElementById("registro").value;
+    const nombres = document.getElementById("nombre").value;
+    const fojaInicial = document.getElementById("fojaInicial").value;
+    const numero = document.getElementById("numero").value;
+    const ano = document.getElementById("ano").value;
+    const tipoCopia = document.getElementById("copia").value;
+    const lugar = document.getElementById("lugar").value;
+    const comuna = document.getElementById("comuna").value;
+    const canal = document.getElementById("canal").value;
+    const tituloDocEspecial = document.getElementById("tituloDocEspecial").value;
+    const contenidoDocEspecial = document.getElementById("contenidoDocEspecial").value;
+
+    let certificadoBytes;
+    switch (tipoCopia) {
+        case "Simple":
+            certificadoBytes = await generateCertificadoSimple(registro, nombres, fojaInicial, numero, ano);
+            break;
+        case "Vigente":
+            certificadoBytes = await generateCertificadoVigente(registro, nombres, fojaInicial, numero, ano);
+            break;
+        case "VigenteParte":
+            certificadoBytes = await generateCertificadoVigenteParte(registro, nombres, fojaInicial, numero, ano);
+            break;
+        case "DominioVigente":
+            certificadoBytes = await generateCertificadoDominioVigente(registro, nombres, fojaInicial, numero, ano, lugar, comuna);
+            break;
+        case "DominioVigenteParte":
+            certificadoBytes = await generateCertificadoDominioVigenteParte(registro, nombres, fojaInicial, numero, ano, lugar, comuna);
+            break;
+        case "DominioVigenteAguas":
+            certificadoBytes = await generateCertificadoDominioVigenteAguas(registro, nombres, fojaInicial, numero, ano, canal);
+            break;
+        case "DominioVigenteAguasParte":
+            certificadoBytes = await generateCertificadoDominioVigenteAguasParte(registro, nombres, fojaInicial, numero, ano, canal);
+            break;
+        case "DocumentoEspecial":
+            certificadoBytes = await generateCertificadoDocEspecial(registro, nombres, fojaInicial, numero, ano, tituloDocEspecial, contenidoDocEspecial);
+            break;
+        default:
+            alert("Seleccione un tipo de copia válido.");
+            return;
+    }
+
+    // Crea un nuevo documento PDF
+    const pdfDoc = await PDFLib.PDFDocument.create();
+
+    // Añade las páginas del certificado
+    const certificadoPdf = await PDFLib.PDFDocument.load(certificadoBytes);
+    const certificadoPages = await pdfDoc.copyPages(certificadoPdf, certificadoPdf.getPageIndices());
+    certificadoPages.forEach((page) => pdfDoc.addPage(page));
+
+    // Añade la primera página de la copia si la imagen recortada está disponible
+    if (fojaInicialRecortada) {
+        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, false); 
+    } else {
+        const copiasPdf = await PDFLib.PDFDocument.load(copiasPdfBytes);
+        const copiasPages = await pdfDoc.copyPages(copiasPdf, [0]);
+        pdfDoc.addPage(copiasPages[0]);
+    }
+
+    // Muestra el documento final en una nueva ventana
+    const pdfBytes = await pdfDoc.save();
+    window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
+}
+
+// Función para ajustar el ancho de la imagen y añadirla al PDF
+async function generatePdfWithAdjustedWidth(imageDataUrl, pdfDoc, alignToBottom = false) {
+    const imageBytes = atob(imageDataUrl.split(',')[1]);
+    const uint8Array = new Uint8Array(imageBytes.length);
+    for (let i = 0; i < imageBytes.length; i++) {
+        uint8Array[i] = imageBytes.charCodeAt(i);
+    }
+
+    const embeddedImage = await pdfDoc.embedPng(uint8Array.buffer);
+    const page = pdfDoc.addPage([612, 936]); // Agrega una nueva página
+
+    const imageWidth = embeddedImage.width;
+    const imageHeight = embeddedImage.height;
+    const pageWidth = page.getWidth();
+    const pageHeight = page.getHeight();
+
+    const scale = pageWidth / imageWidth;
+    const scaledImageHeight = imageHeight * scale;
+    const margin = 50; // Margen de 50 unidades
+
+    if (scaledImageHeight + margin > pageHeight) {
+        const scaleForHeight = (pageHeight - margin) / imageHeight;
+        const scaledImageWidth = imageWidth * scaleForHeight;
+
+        page.drawImage(embeddedImage, {
+            x: (pageWidth - scaledImageWidth) / 2,
+            y: alignToBottom ? margin : 0,
+            width: scaledImageWidth,
+            height: pageHeight - margin,
+        });
+    } else {
+        // const yPosition = (pageHeight - scaledImageHeight) / 2; // Centramos la imagen recortada horizontalmente
+        const yPosition = alignToBottom ? margin : pageHeight - scaledImageHeight - margin;
+        page.drawImage(embeddedImage, {
+            x: 0,
+            y: yPosition,
+            width: pageWidth,
+            height: scaledImageHeight,
+        });
+    }
+}
+
+// Asigna el evento del botón "Documento Final"
+const generarPdfFinalUnaFojaButton = document.getElementById("generarPdfFinalUnaFojaButton");
+generarPdfFinalUnaFojaButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    generarDocumentoFinal1();
+    localStorage.clear();
+});
