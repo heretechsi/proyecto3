@@ -21,6 +21,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>CBR - Copias de Registro</title>
     <script src="pdf-lib.min.js"></script>
     <script src="jspdf.min.js"></script>
+    <script src="validar-y-generar-pdf.js"></script>
 </head>
 
 <body class="prepararcopia">
@@ -243,44 +244,12 @@ if (!isset($_SESSION['user_id'])) {
             })
         });
 
+        // ===== VALIDACIÓN DE SOLICITUD MOVIDA A validar-y-generar-pdf.js =====
+        // Los event listeners para los botones ahora están en validar-y-generar-pdf.js
+        // Eso permite validar el numeroSolicitud antes de generar el PDF.
+
     </script>
-
-    <script>
-        // Asigna el evento del botón copias
-        const generarPdfCopiasButton = document.getElementById("generarPdfCopiasButton");
-        generarPdfCopiasButton.addEventListener("click", (event) => {
-            event.preventDefault();
-            const fojaInicial = document.getElementById("fojaInicial").value;
-            const fojaFinal = document.getElementById("fojaFinal").value;
-            
-            if (fojaInicial === fojaFinal) {
-                generarPDFUnaFoja();
-            } else {
-                generarCopiasOnly();
-            }
-            localStorage.clear();
-        });
-
-        // Asigna el evento del botón documento final
-        document.getElementById('generatePdfFinalButton').addEventListener('click', (event) => {
-            event.preventDefault();
-            const noMembrete = document.getElementById('noMembrete').checked;
-            localStorage.setItem('noMembrete', noMembrete);
-
-            const fojaInicial = document.getElementById('fojaInicial').value;
-            const fojaFinal = document.getElementById('fojaFinal').value;
     
-            if (fojaInicial === fojaFinal) {
-                generarDocumentoFinal1();
-            } else {
-                generarDocumentoFinal();
-            }
-            localStorage.clear();
-        });
-
-
-    </script>
-
 </body>
 
 </html>
