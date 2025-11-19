@@ -1,0 +1,8 @@
+En XAMPP en archivo:
+
+C:\xampp\mysql\bin\my.ini
+
+Buscar la sección [mysqld]. y Agregar (o modifica si existe) la línea:
+
+max_allowed_packet=128M
+egún tus necesidades y tamaño máximo estimado de los PDFs.
