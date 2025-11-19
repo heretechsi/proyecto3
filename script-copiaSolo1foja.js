@@ -26,6 +26,30 @@ async function generarPDFUnaFoja() {
 
     // Muestra el documento final en una nueva ventana
     const pdfBytes = await pdfDoc.save();
+
+    // Guardar en base de datos
+    const numeroSolicitud = document.getElementById('numeroSolicitud').value;
+    const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
+    
+    const formData = new FormData();
+    formData.append('id_certificado', numeroSolicitud);
+    formData.append('pdf', pdfBlob, 'copia_unica.pdf');
+    
+    try {
+        const response = await fetch('guardar_pdf.php', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+            console.log('Copia guardada en base de datos');
+        } else {
+            console.error('Error al guardar copia:', result.error);
+        }
+    } catch (error) {
+        console.error('Error de conexión:', error);
+    }
+
     window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
 }
 
@@ -113,6 +137,30 @@ async function generarDocumentoFinal1() {
 
     // Muestra el documento final en una nueva ventana
     const pdfBytes = await pdfDoc.save();
+
+    // Guardar en base de datos
+    const numeroSolicitud = document.getElementById('numeroSolicitud').value;
+    const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
+    
+    const formData = new FormData();
+    formData.append('id_certificado', numeroSolicitud);
+    formData.append('pdf', pdfBlob, 'documento_final_unico.pdf');
+    
+    try {
+        const response = await fetch('guardar_pdf.php', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+            console.log('Documento guardado en base de datos');
+        } else {
+            console.error('Error al guardar documento:', result.error);
+        }
+    } catch (error) {
+        console.error('Error de conexión:', error);
+    }
+
     window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
 }
 
