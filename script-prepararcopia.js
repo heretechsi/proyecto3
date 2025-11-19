@@ -1,14 +1,12 @@
-let fojaInicialRecortada = null;  // Declaramos variable de recorte como null
-let fojaFinalRecortada = null;    // Declaramos variable de recorte como null
+let fojaInicialRecortada = null;
+let fojaFinalRecortada = null;
 
 console.log("fojaInicialRecortada al cargar la página:", fojaInicialRecortada);
 console.log("fojaFinalRecortada al cargar la página:", fojaFinalRecortada);
 
-// Función para convertir el formato de fojas
 function convertirFormatoFojas(foja) {
     const numero = parseInt(foja);
     let resultado;
-
     if (foja.includes("bis") && foja.includes("v")) {
         resultado = `${numero}.4`;
     } else if (foja.includes("bis")) {
@@ -18,12 +16,10 @@ function convertirFormatoFojas(foja) {
     } else {
         resultado = `${numero}.1`;
     }
-    
     console.log(`convertirFormatoFojas(${foja}) -> ${resultado}`);
     return resultado;
 }
 
-// Función para mostrar las imágenes antes de generar el PDF
 async function mostrarImagenes() {
     const tipoRegistro = document.getElementById("registro").value;
     const selectedYear = document.getElementById("ano").value;
@@ -31,35 +27,25 @@ async function mostrarImagenes() {
     const fojaFinal = convertirFormatoFojas(document.getElementById("fojaFinal").value);
 
     const imageGallery = document.getElementById("imageGallery");
-    imageGallery.innerHTML = ""; // Limpia cualquier imagen existente
+    imageGallery.innerHTML = "";
 
     const fojaInicialNum = parseFloat(fojaInicial);
     const fojaFinalNum = parseFloat(fojaFinal);
 
-    console.log(`fojaInicialNum: ${fojaInicialNum}, fojaFinalNum: ${fojaFinalNum}`);
-
     for (let foja = fojaInicialNum; foja <= fojaFinalNum; foja = parseFloat((Math.floor(foja) + (foja % 1) * 10 / 10 + 0.1).toFixed(1))) {
         const fojaRedondeada = foja.toFixed(1);
-        console.log(`Generando imagen para foja: ${fojaRedondeada}`);
         const imgPath = `upload/${tipoRegistro}/${selectedYear}/${fojaRedondeada}.jpg`;
         const imageExists = await imageExistsAsync(imgPath);
-
         if (imageExists) {
             const imgElement = document.createElement("img");
             imgElement.src = imgPath;
             imageGallery.appendChild(imgElement);
-        } else {
-            console.warn(`La imagen no existe en la ruta: ${imgPath}`);
         }
 
-        // Manejo de bis y vbis
         if (foja % 1 === 0.1) {
             const baseNumber = Math.floor(foja);
             const nextBis = parseFloat(`${baseNumber}.3`);
             const nextVBis = parseFloat(`${baseNumber}.4`);
-
-            console.log(`nextBis: ${nextBis}, nextVBis: ${nextVBis}`);
-
             if (nextBis <= fojaFinalNum) {
                 const nextBisPath = `upload/${tipoRegistro}/${selectedYear}/${nextBis.toFixed(1)}.jpg`;
                 const nextBisExists = await imageExistsAsync(nextBisPath);
@@ -67,11 +53,8 @@ async function mostrarImagenes() {
                     const bisImgElement = document.createElement("img");
                     bisImgElement.src = nextBisPath;
                     imageGallery.appendChild(bisImgElement);
-                } else {
-                    console.warn(`La imagen bis no existe en la ruta: ${nextBisPath}`);
                 }
             }
-
             if (nextVBis <= fojaFinalNum) {
                 const nextVBisPath = `upload/${tipoRegistro}/${selectedYear}/${nextVBis.toFixed(1)}.jpg`;
                 const nextVBisExists = await imageExistsAsync(nextVBisPath);
@@ -79,27 +62,22 @@ async function mostrarImagenes() {
                     const vBisImgElement = document.createElement("img");
                     vBisImgElement.src = nextVBisPath;
                     imageGallery.appendChild(vBisImgElement);
-                } else {
-                    console.warn(`La imagen vbis no existe en la ruta: ${nextVBisPath}`);
                 }
             }
         }
     }
 }
 
-// Función para verificar si una imagen existe
 async function imageExistsAsync(url) {
     try {
         const response = await fetch(url, { method: 'HEAD' });
-        console.log(`Verificación de existencia de imagen en URL: ${url}, Resultado: ${response.ok}`);
         return response.ok;
     } catch (error) {
-        console.error(`Error al verificar la existencia de la imagen en URL: ${url}`, error);
+        console.error(`Error al verificar imagen: ${url}`, error);
         return false;
     }
 }
 
-// Función para generar el PDF de las copias
 async function generateCopiasPDF() {
     const tipoRegistro = document.getElementById("registro").value;
     const selectedYear = document.getElementById("ano").value;
@@ -107,7 +85,6 @@ async function generateCopiasPDF() {
     const fojaFinal = convertirFormatoFojas(document.getElementById("fojaFinal").value);
 
     const pdfDoc = await PDFLib.PDFDocument.create();
-
     const fojaInicialNum = parseFloat(fojaInicial);
     const fojaFinalNum = parseFloat(fojaFinal);
 
@@ -115,7 +92,6 @@ async function generateCopiasPDF() {
         const fojaRedondeada = foja.toFixed(1);
         const imgPath = `upload/${tipoRegistro}/${selectedYear}/${fojaRedondeada}.jpg`;
         const imageExists = await imageExistsAsync(imgPath);
-
         if (imageExists) {
             const imageBytes = await fetch(imgPath).then(response => response.arrayBuffer());
             const image = await pdfDoc.embedJpg(imageBytes);
@@ -127,13 +103,10 @@ async function generateCopiasPDF() {
                 height: page.getHeight(),
             });
         }
-
-        // Manejo de bis y vbis
         if (foja % 1 === 0.1) {
             const baseNumber = Math.floor(foja);
             const nextBis = parseFloat(`${baseNumber}.3`);
             const nextVBis = parseFloat(`${baseNumber}.4`);
-
             if (nextBis <= fojaFinalNum) {
                 const nextBisPath = `upload/${tipoRegistro}/${selectedYear}/${nextBis.toFixed(1)}.jpg`;
                 const nextBisExists = await imageExistsAsync(nextBisPath);
@@ -149,7 +122,6 @@ async function generateCopiasPDF() {
                     });
                 }
             }
-
             if (nextVBis <= fojaFinalNum) {
                 const nextVBisPath = `upload/${tipoRegistro}/${selectedYear}/${nextVBis.toFixed(1)}.jpg`;
                 const nextVBisExists = await imageExistsAsync(nextVBisPath);
@@ -167,90 +139,92 @@ async function generateCopiasPDF() {
             }
         }
     }
-
     return pdfDoc.save();
 }
-// Genera copias sin certificado
+
 async function generarCopiasOnly() {
-    // Recuperar las imágenes recortadas desde localStorage al cargar la página
     let fojaInicialRecortada = localStorage.getItem('fojaInicialRecortada');
     let fojaFinalRecortada = localStorage.getItem('fojaFinalRecortada');
 
-    // Genera el PDF de las copias
     const copiasPdfBytes = await generateCopiasPDF();
-    
-    if (!copiasPdfBytes) {
+    if (!copiasPdfBytes || copiasPdfBytes.length < 1000) {
         alert("No se han generado las copias.");
         return;
     }
 
     const pdfDoc = await PDFLib.PDFDocument.create();
-    
-    // Añade las páginas de las copias
     const copiasPdf = await PDFLib.PDFDocument.load(copiasPdfBytes);
     const copiasPages = await pdfDoc.copyPages(copiasPdf, copiasPdf.getPageIndices());
 
-    // Reemplaza la primera y última página si las imágenes recortadas están disponibles
     if (fojaInicialRecortada) {
-        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, true); // true para la primera página (a margen inferior)
+        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, true);
     } else {
         pdfDoc.addPage(copiasPages[0]);
     }
-
     for (let i = 1; i < copiasPages.length - 1; i++) {
         pdfDoc.addPage(copiasPages[i]);
     }
-
     if (fojaFinalRecortada) {
-        await generatePdfWithAdjustedWidth(fojaFinalRecortada, pdfDoc, false); // false para la última página (a margen superior)
+        await generatePdfWithAdjustedWidth(fojaFinalRecortada, pdfDoc, false);
     } else {
         pdfDoc.addPage(copiasPages[copiasPages.length - 1]);
     }
-
-    // Muestra el documento final en una nueva ventana
     const pdfBytes = await pdfDoc.save();
 
-    // Guardar en base de datos
     const numeroSolicitud = document.getElementById('numeroSolicitud').value;
+    if (!numeroSolicitud || numeroSolicitud.trim().length < 1) {
+        alert('Debes ingresar el número de solicitud antes de guardar.');
+        return;
+    }
+    if (!pdfBytes || pdfBytes.length < 1000) {
+        alert('El PDF está vacío.');
+        return;
+    }
+
     const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
-    
     const formData = new FormData();
     formData.append('id_certificado', numeroSolicitud);
     formData.append('pdf', pdfBlob, 'copia.pdf');
-    
+
+    // Manejo robusto de respuesta del servidor
     try {
         const response = await fetch('guardar_pdf.php', {
             method: 'POST',
             body: formData
         });
-        const result = await response.json();
-        if (result.success) {
-            console.log('PDF guardado en base de datos');
-        } else {
-            console.error('Error al guardar PDF:', result.error);
+        const text = await response.text();
+        try {
+            const result = JSON.parse(text);
+            if (result.success) {
+                console.log('PDF guardado en base de datos');
+            } else {
+                alert('Error al guardar PDF: ' + result.error);
+                console.error('Error al guardar PDF:', result.error);
+            }
+        } catch (jsonError) {
+            console.error("Error: respuesta del servidor no es JSON válida:");
+            console.error(text);
+            alert("Error inesperado del servidor. Comunícalo al administrador.");
         }
     } catch (error) {
+        alert('Error de conexión: ' + error);
         console.error('Error de conexión:', error);
     }
 
     window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
 }
 
-//Genera documento final (certificado y copias)
 async function generarDocumentoFinal() {
-    // Recuperar las imágenes recortadas desde localStorage al cargar la página
     let fojaInicialRecortada = localStorage.getItem('fojaInicialRecortada');
     let fojaFinalRecortada = localStorage.getItem('fojaFinalRecortada');
 
-    // Genera el PDF de las copias
     const copiasPdfBytes = await generateCopiasPDF();
-
-    if (!copiasPdfBytes) {
+    if (!copiasPdfBytes || copiasPdfBytes.length < 1000) {
         alert("No se han generado las copias.");
         return;
     }
 
-    // Genera el certificado con los datos del formulario
+    // Datos del formulario para el certificado
     const registro = document.getElementById("registro").value;
     const nombres = document.getElementById("nombre").value;
     const fojaInicial = document.getElementById("fojaInicial").value;
@@ -294,65 +268,70 @@ async function generarDocumentoFinal() {
             return;
     }
 
-    // Crea un nuevo documento PDF
     const pdfDoc = await PDFLib.PDFDocument.create();
-
-    // Añade las páginas del certificado
     const certificadoPdf = await PDFLib.PDFDocument.load(certificadoBytes);
     const certificadoPages = await pdfDoc.copyPages(certificadoPdf, certificadoPdf.getPageIndices());
     certificadoPages.forEach((page) => pdfDoc.addPage(page));
 
-    // Añade las páginas de las copias
     const copiasPdf = await PDFLib.PDFDocument.load(copiasPdfBytes);
     const copiasPages = await pdfDoc.copyPages(copiasPdf, copiasPdf.getPageIndices());
 
-    // Reemplaza la primera y última página si las imágenes recortadas están disponibles
     if (fojaInicialRecortada) {
-        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, true); // true para la primera página (a margen inferior)
+        await generatePdfWithAdjustedWidth(fojaInicialRecortada, pdfDoc, true);
     } else {
         pdfDoc.addPage(copiasPages[0]);
     }
-
     for (let i = 1; i < copiasPages.length - 1; i++) {
         pdfDoc.addPage(copiasPages[i]);
     }
-
     if (fojaFinalRecortada) {
-        await generatePdfWithAdjustedWidth(fojaFinalRecortada, pdfDoc, false); // false para la última página (a margen superior)
+        await generatePdfWithAdjustedWidth(fojaFinalRecortada, pdfDoc, false);
     } else {
         pdfDoc.addPage(copiasPages[copiasPages.length - 1]);
     }
-
-    // Muestra el documento final en una nueva ventana
     const pdfBytes = await pdfDoc.save();
 
-    // Guardar en base de datos
     const numeroSolicitud = document.getElementById('numeroSolicitud').value;
+    if (!numeroSolicitud || numeroSolicitud.trim().length < 1) {
+        alert('Debes ingresar el número de solicitud antes de guardar.');
+        return;
+    }
+    if (!pdfBytes || pdfBytes.length < 1000) {
+        alert('El PDF está vacío.');
+        return;
+    }
+
     const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
-    
     const formData = new FormData();
     formData.append('id_certificado', numeroSolicitud);
     formData.append('pdf', pdfBlob, 'documento_final.pdf');
-    
+
     try {
         const response = await fetch('guardar_pdf.php', {
             method: 'POST',
             body: formData
         });
-        const result = await response.json();
-        if (result.success) {
-            console.log('Documento guardado en base de datos');
-        } else {
-            console.error('Error al guardar documento:', result.error);
+        const text = await response.text();
+        try {
+            const result = JSON.parse(text);
+            if (result.success) {
+                console.log('Documento guardado en base de datos');
+            } else {
+                alert('Error al guardar documento: ' + result.error);
+                console.error('Error al guardar documento:', result.error);
+            }
+        } catch (jsonError) {
+            console.error("Error: respuesta del servidor no es JSON válida:");
+            console.error(text);
+            alert("Error inesperado del servidor. Comunícalo al administrador.");
         }
     } catch (error) {
+        alert('Error de conexión: ' + error);
         console.error('Error de conexión:', error);
     }
 
     window.open(URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })), "_blank");
 }
-
-//////////////////////////////////////////////////////////////////////////////
 
 async function generatePdfWithAdjustedWidth(imageDataUrl, pdfDoc, alignToBottom = false) {
     const imageBytes = atob(imageDataUrl.split(',')[1]);
@@ -360,23 +339,18 @@ async function generatePdfWithAdjustedWidth(imageDataUrl, pdfDoc, alignToBottom 
     for (let i = 0; i < imageBytes.length; i++) {
         uint8Array[i] = imageBytes.charCodeAt(i);
     }
-
     const embeddedImage = await pdfDoc.embedPng(uint8Array.buffer);
-    const page = pdfDoc.addPage([612, 936]); // Agrega una nueva página
-
+    const page = pdfDoc.addPage([612, 936]);
     const imageWidth = embeddedImage.width;
     const imageHeight = embeddedImage.height;
     const pageWidth = page.getWidth();
     const pageHeight = page.getHeight();
-
     const scale = pageWidth / imageWidth;
     const scaledImageHeight = imageHeight * scale;
-    const margin = 50; // Margen de 50 unidades
-
+    const margin = 50;
     if (scaledImageHeight + margin > pageHeight) {
         const scaleForHeight = (pageHeight - margin) / imageHeight;
         const scaledImageWidth = imageWidth * scaleForHeight;
-
         page.drawImage(embeddedImage, {
             x: (pageWidth - scaledImageWidth) / 2,
             y: alignToBottom ? margin : 0,
@@ -394,42 +368,32 @@ async function generatePdfWithAdjustedWidth(imageDataUrl, pdfDoc, alignToBottom 
     }
 }
 
-// Asigna el evento del botón "Mostrar Imágenes"
 const showImagesButton = document.getElementById("showImagesButton");
 showImagesButton.addEventListener("click", (event) => {
     event.preventDefault();
     mostrarImagenes();
 });
 
-// Función para abrir la ventana de recorte y cargar la imagen correspondiente a la primera foja del registro
 function openCropImage() {
     const tipoRegistro = document.getElementById("registro").value;
     const selectedYear = document.getElementById("ano").value;
     const fojaInicial = convertirFormatoFojas(document.getElementById("fojaInicial").value);
-
     const imgPath = `upload/${tipoRegistro}/${selectedYear}/${fojaInicial}.jpg`;
     window.open(`recorte.html?imgPath=${encodeURIComponent(imgPath)}`, "_blank");
 }
-
-// Asigna el evento del botón "Recortar primera foja"
 const cropImageButton = document.getElementById("cropImageButton");
 cropImageButton.addEventListener("click", openCropImage);
 
-// Función para abrir la ventana de recorte y cargar la imagen correspondiente a la última foja del registro
 function openCropImage2() {
     const tipoRegistro = document.getElementById("registro").value;
     const selectedYear = document.getElementById("ano").value;
     const fojaFinal = convertirFormatoFojas(document.getElementById("fojaFinal").value);
-
     const imgPath = `upload/${tipoRegistro}/${selectedYear}/${fojaFinal}.jpg`;
     window.open(`recorte2.html?imgPath=${encodeURIComponent(imgPath)}`, "_blank");
 }
-
-// Asigna el evento del botón "Recortar última foja"
 const cropImageButton2 = document.getElementById("cropImageButton2");
 cropImageButton2.addEventListener("click", openCropImage2);
 
-// Función para cargar una imagen
 function loadImage(src) {
     return new Promise((resolve, reject) => {
         const img = new Image();
@@ -439,20 +403,12 @@ function loadImage(src) {
     });
 }
 
-// Event listener para el botón que limpia formulario y recortes
 document.getElementById('limpiarDatosButton').addEventListener('click', () => {
-    // Limpia el formulario
     document.getElementById('form').reset();
-        
-    // Recarga la página
     location.reload();
-    
     console.log("Formulario, localStorage y lienzo limpiados.");
-
 });
 
-// Evento Limpiar el localStorage al refrescar ventana
 window.addEventListener('beforeunload', (event) => {
     localStorage.clear();
 });
-
